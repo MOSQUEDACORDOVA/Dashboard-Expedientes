@@ -236,10 +236,8 @@
 
                             <div class="col-lg-12">
                                 <label for="basiInput" class="form-label">Distrito promotor                            </label>
-                                <select class="form-select rounded-pill mb-3" id="distritoPromotor" name="distritoPromotor" value="<?php echo e($expediente->traze_vinculado); ?>"  aria-label="Default select example">
-
-                                    <option value="" <?php echo e($expediente->cliente->provincia == 'provincia' ? 'selected' : ''); ?>>Provincia1</option>
-
+                                <select class="form-select rounded-pill mb-3" id="distritoPromotor" name="distritoPromotor" value="<?php echo e($expediente->cliente->distrito); ?>">
+                                    <option value="" <?php echo e($expediente->cliente->distrito == 'distrito' ? 'selected' : ''); ?>>Provincia1</option>
                                 </select>
                             </div>
 
@@ -438,6 +436,18 @@
             <div class="col-xxl-12 mb-3 col-md-12">
                 <label for="AntecedenteRegistral<?php echo e($index); ?>" class="form-label">Antecedente Registral</label>
                 <input type="text" class="form-control" id="AntecedenteRegistral<?php echo e($index); ?>" name="inmuebles[<?php echo e($index); ?>][antecedente]" value="<?php echo e(old('inmuebles.' . $index . '.antecedente', $inmueble->antecedente)); ?>">
+            </div>
+            <div class="col-xxl-12 mb-3 col-md-12">
+                <div>
+                    <label for="fichaInput1" class="form-label">Ficha Inmueble</label>
+                    <input type="text" class="form-control" id="fichaInput1" name="inmuebles[<?php echo e($index); ?>][ficha]" value="<?php echo e(old('ficha.' . $index . '.ficha', $inmueble->ficha)); ?>">
+                </div>
+            </div>
+            <div class="col-xxl-12 mb-3 col-md-12">
+                <div>
+                    <label for="anioInput1" class="form-label">DDJJ Inmueble</label>
+                    <input type="text" class="form-control" id="anioInput1" name="inmuebles[<?php echo e($index); ?>][anio_ddjj]" value="<?php echo e(old('anio_ddjj.' . $index . '.anio_ddjj', $inmueble->anio_ddjj)); ?>">
+                </div>
             </div>
             <div class="col-xxl-12 mb-3 col-md-12">
                 <div>

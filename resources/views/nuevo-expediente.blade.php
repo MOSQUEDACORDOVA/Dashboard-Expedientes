@@ -236,7 +236,6 @@
                                 <label for="basiInput" class="form-label">Distrito promotor                            </label>
                                 <select class="form-select rounded-pill mb-3" id="distritoPromotor" name="distritoPromotor" value=""  aria-label="Default select example">
                                     <option selected>Ingresar dato</option>
-
                                 </select>
                             </div>
 
@@ -454,6 +453,18 @@
             <div>
                 <label for="AntecedenteRegistral" class="form-label">Antecedente Registral</label>
                 <input type="text" class="form-control" id="antecedenteInput1" name="inmuebles[0][antecedente]" value="">
+            </div>
+        </div>
+        <div class="col-xxl-12 mb-3 col-md-12">
+            <div>
+                <label for="fichaInput1" class="form-label">Ficha Inmueble</label>
+                <input type="text" class="form-control" id="fichaInput1" name="inmuebles[0][ficha]" value="">
+            </div>
+        </div>
+        <div class="col-xxl-12 mb-3 col-md-12">
+            <div>
+                <label for="anioInput1" class="form-label">DDJJ Inmueble</label>
+                <input type="text" class="form-control" id="anioInput1" name="inmuebles[0][anio_ddjj]" value="">
             </div>
         </div>
         <div class="col-xxl-12 mb-3 col-md-12">

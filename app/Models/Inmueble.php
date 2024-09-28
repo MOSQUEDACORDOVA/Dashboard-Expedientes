@@ -10,6 +10,8 @@ class Inmueble extends Model
     protected $fillable = [
         'partida',
         'antecedente',
+        'ficha',
+        'anio_ddjj',
         'direccion',
         'departamento',
         'provincia',

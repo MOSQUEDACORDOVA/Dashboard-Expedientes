@@ -15,6 +15,8 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('partida')->nullable();
             $table->string('antecedente')->nullable();
+            $table->string('ficha')->nullable();
+            $table->string('anio_ddjj')->nullable();
             $table->string('direccion')->nullable();
             $table->string('departamento')->nullable();
             $table->string('provincia')->nullable();
