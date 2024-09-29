@@ -128,7 +128,7 @@
                 <td>${formatDate(expediente.created_at)}</td>
                 <td>Incompleto</td>
                 <td style=""><a href="editar-expedientes/${expediente.id}"><i style="font-size:20px; color:#3cd188;" class="las la-edit"></i></a>
-                    <a href="reporte-expediente/${expediente.id}"> <i style="font-size:20px; color:#495057;" class="las la-file-pdf"></i></a>
+                    <a href="reporte-expediente/${expediente.id}" target="_blank"> <i style="font-size:20px; color:#495057;" class="las la-file-pdf"></i></a>
                 <i style="font-size:20px; color:red; cursor:pointer;" class="las la-trash" data-id="${expediente.id}" onclick="confirmDelete(this)"></i></td>
             `;
 

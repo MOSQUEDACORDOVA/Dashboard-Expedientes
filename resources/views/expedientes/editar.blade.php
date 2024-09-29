@@ -243,14 +243,14 @@
                             </div>
 
 
-                            @php
+                        @php
                             $poderesSeleccionados = $expediente->cliente->poderes ?? '';
 
-                    // Si es una cadena separada por comas, la convertimos a un array
-                    // Si es un JSON válido, decodificarlo a un array
+                            // Si es una cadena separada por comas, la convertimos a un array
+                            // Si es un JSON válido, decodificarlo a un array
 
 
-                             if (is_string($poderesSeleccionados)) {
+                            if (is_string($poderesSeleccionados)) {
                                 $poderesSeleccionados = json_decode($poderesSeleccionados, true);
 
                                 // Si la decodificación falla (es decir, no es un JSON válido), lo tratamos como una cadena separada por comas
@@ -258,7 +258,6 @@
                                     $poderesSeleccionados = explode(',', $poderesSeleccionados);
                                 }
                             }
-
 
                             //dd($poderesSeleccionados);
 
@@ -518,7 +517,7 @@
 
 
 
-                   @php
+            @php
                 // Recuperar el valor del campo old, si está disponible
                 $carg = old('inmuebles.' . $index . '.cargas', json_encode($inmueble->cargas));
 
@@ -842,22 +841,22 @@
                         </div>
 
                         @php
-                      // Recuperar el valor del campo old, si está disponible
-                                     // Decodificar el JSON a un array PHP
-                                     $variableJs = $expediente->evaluacion->documentos_re;
+                            // Recuperar el valor del campo old, si está disponible
+                            // Decodificar el JSON a un array PHP
+                            $variableJs = $expediente->evaluacion->documentos_re;
 
-                                // Si $variableJs es null o una cadena vacía, asignar un valor predeterminado
-                                $variableJs = $variableJs ?? '[]'; // Usar un array JSON vacío como valor predeterminado
+                            // Si $variableJs es null o una cadena vacía, asignar un valor predeterminado
+                            $variableJs = $variableJs ?? '[]'; // Usar un array JSON vacío como valor predeterminado
 
-                                // Decodificar el JSON a un array PHP
-                                $docre = json_decode($variableJs, true);
+                            // Decodificar el JSON a un array PHP
+                            $docre = json_decode($variableJs, true);
 
-                                // Si json_decode devuelve null (por un JSON inválido), inicializarlo como un array vacío
-                                $docre = $docre ?? [];
+                            // Si json_decode devuelve null (por un JSON inválido), inicializarlo como un array vacío
+                            $docre = $docre ?? [];
 
-                                // Para depurar
-                               // dd($docre);
-                  @endphp
+                            // Para depurar
+                            // dd($docre);
+                        @endphp
 
                         <h4 class="mb-3">  DOCUMENTOS RECIBIDOS </h3>
 
